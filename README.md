@@ -1,4 +1,4 @@
-# swiftui-tips
+# SwiftUI Tips&Tricks
 CocoaHeads Aachen: SwiftUI Tips&amp;Tricks 09/24/2020
 
 # Topics in the example
