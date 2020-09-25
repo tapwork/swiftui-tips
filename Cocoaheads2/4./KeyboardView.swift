@@ -21,9 +21,7 @@ struct KeyboardView: View {
                     .frame(width: 200, height: 60)
                 Spacer(minLength: 80)
             }.keyboardHandling()
-        }.simultaneousGesture(DragGesture().onChanged({ (_) in
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        }))
+        }.hideKeyboard()
     }
 }
 

@@ -14,38 +14,40 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 20) {
+            List {
                 NavigationLink(
                     destination: ViewModifierView(),
                     label: {
-                        Text("ViewModifierView").paddingBackground(color: .gray)
+                        Text("ViewModifierView")
                     })
                 NavigationLink(
+                    // Here you can append the environment to use a custom locale
                     destination: Environments(), //.environment(\.locale, Locale(identifier: "DE")),
                     label: {
-                        Text("Locale Environment").paddingBackground(color: .gray)
+                        Text("Locale Environment")
                     })
                 NavigationLink(
+                    // Here you can append the environment to use a cache (i.e. for testing)
                     destination: ImageView(url: url), //.environment(\.imageCache, staticCache),
                     label: {
-                        Text("Image with cache (custom Environment)").paddingBackground(color: .gray)
+                        Text("Image with cache (custom Environment)")
                     })
                 NavigationLink(
                     destination: KeyboardView(),
                     label: {
-                        Text("Keyboard handling").paddingBackground(color: .gray)
+                        Text("Keyboard handling")
                     })
                 NavigationLink(
                     destination: NavigatableImageView(url: url),
                     label: {
-                        Text("Wrong and correct UIViewRepresentable handling").paddingBackground(color: .gray)
+                        Text("Wrong and correct UIViewRepresentable handling")
                     })
                 NavigationLink(
                     destination: StateObjectDemo(),
                     label: {
-                        Text("StateObjectDemo").paddingBackground(color: .gray)
+                        Text("StateObjectDemo")
                     })
-            }
+            }.navigationTitle("SwiftUI Tips")
         }
     }
 }

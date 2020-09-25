@@ -38,17 +38,16 @@ extension View {
     }
 }
 
-
-
-
-
-
-
-
-
+struct ResignFirstResponderModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.simultaneousGesture(DragGesture().onChanged({ _ in
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }))
+    }
+}
 
 extension View {
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    func hideKeyboard() -> ModifiedContent<Self, ResignFirstResponderModifier>  {
+        modifier(ResignFirstResponderModifier())
     }
 }
