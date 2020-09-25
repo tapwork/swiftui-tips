@@ -1,2 +1,2 @@
 # swiftui-tips
-CocoaHeads Aachen: SwiftUI Tips&amp;Tricks 09/25/2020
+CocoaHeads Aachen: SwiftUI Tips&amp;Tricks 09/24/2020
