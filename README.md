@@ -1,5 +1,5 @@
 # SwiftUI Tips&Tricks
-CocoaHeads Aachen: SwiftUI Tips&amp;Tricks 09/24/2020
+CocoaHeads Aachen: 09/24/2020
 
 # Topics in the example
 1. ViewModfier (custom)
